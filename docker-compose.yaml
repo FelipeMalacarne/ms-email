@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  db:
+    image: postgres:latest
+    restart: always
+    volumes:
+      - ./db/var/lib/postgresql/data/:/var/lib/postgresql/data
+    environment:
+        POSTGRES_USER: postgres
+        POSTGRES_PASSWORD: admin
+        POSTGRES_DB: email_db
+        PGDATA: /var/lib/postgresql/data/
+    ports:
+      - "5432:5432"
+volumes:
+    db:
