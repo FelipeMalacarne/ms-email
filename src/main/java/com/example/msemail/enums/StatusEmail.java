@@ -1,2 +1,6 @@
-package com.example.msemail.enums;public enum StatusEmail {
+package com.example.msemail.enums;
+
+public enum StatusEmail {
+    SENT,
+    ERROR;
 }
